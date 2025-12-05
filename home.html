@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Wheelora</title>
+
+
+
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Oleo+Script:wght@400;700&display=swap');
+
+        body {
+            background-color: #242424;
+            font-family: "Google Sans Flex", sans-serif;
+            color: white;
+            font-size: 14px;
+        }
+
+        header {
+            background-color: black;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+            color: rgb(209, 205, 205);
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+
+
+        }
+
+        nav h1 {
+
+            color: #8b1e1e;
+            font-family: "Pirata One", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            padding-left: 12px;
+
+
+        }
+
+        nav span {
+            padding-right: 17px
+        }
+
+        .div {
+            background-image: url("https://rashitiwari423-lgtm.github.io/Wheelora/bike%20image.jpg");
+            height: 100vh;
+            background-repeat: no-repeat;
+            width: 100vw;
+            opacity: 0.6;
+            background-size: 100% 100%;
+            color: #d4d4d4;
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+
+        }
+
+        .heading {
+
+            color: #bfbfbf;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            transform: translateY(-570px);
+            font-family: "Oleo Script", system-ui;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .carousel figcaption {
+            transform: translateX(45%);
+        }
+
+        .carousel img {
+            transform: translateX(30%);
+
+        }
+
+        .bt {
+            background-color: rgb(207, 46, 46);
+            color: white;
+            border-radius: 10px;
+            margin-left:1000px;
+        }
+
+        .moto {
+            background-color: rgb(69, 70, 70);
+            height: 50px;
+            padding: 8px;
+        }
+
+        .list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+        }
+
+        .card {
+            background-image: linear-gradient(45deg, rgb(92, 91, 91), rgb(37, 35, 35));
+            width: 100px;
+            color: white;
+            box-shadow: 10px black;
+            margin-right: 10px;
+            border-radius: 12px;
+            transition: transform .3s ease;
+           
+
+        }
+        .card img{
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            scale: 1.2x;
+            animation: ease-in;
+          
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        footer{
+            background-color: rgb(22, 21, 21);
+            margin-top: 20px;
+           
+            color:white;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            padding: 50px;
+            
+        }
+        .footer-brand-name {
+            font-size: 17px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        aside span{
+            margin-right: 8px;
+        }
+
+        .data ~ span{
+            display: block;
+            font-size: 14px;
+            color: gray;
+            padding: 5px 0;
+        }
+
+        .data{
+            padding-bottom: 8px;
+        }
+      
+        button:hover{
+            transform: scale(1.05);
+            scale: 1.2x;
+            animation:  5s ease-in;
+            
+          
+        }
+        
+    </style>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <div>
+            <nav>
+                <h1>Wheelora</h1>
+            </nav>
+        </div>
+        <div>
+            <nav><span class="dropdown" data-bs-theme="dark"><button class="btn dropdown-toggle text-light "
+                        id="dropdownMenuButtonLight" data-bs-toggle="dropdown">Motorcycles</button>
+                    <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenuButtonLight">
+                        <li><a href="#all">All</a></li>
+                        <li><a href="#sports">Sport</a></li>
+                        <li><a href="#tour">Tour</a></li>
+                        <li><a href="#roadster">Roadster</a></li>
+                        <li><a href="#heritage">Heritage</a></li>
+                        <li><a href="#adventure">Adventure</a></li>
+                    </ul>
+                </span>
+                <span class="dropdown" data-bs-theme="dark"><button class="btn dropdown-toggle text-light" id="dropdownMenuButtonLight1" data-bs-toggle="dropdown">Shops</button>
+                  <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenuButtonLight1">
+                    <li>Accesories</li>
+                    <li>Apparel</li>
+                    <li>Service Package</li>
+                    <li>More</li>
+                  </ul>
+                </span>
+                <span class="dropdown" data-bs-theme="dark"><button class="btn dropdown-toggle text-light" id="dropdownMenuButtonLight2" data-bs-toggle="dropdown"> Services</button>
+                    <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenuButtonLight2">
+                    <li>Book a Service</li>
+                    <li>Service Centers</li>
+                    <li>Service Package</li>
+                    <li>More</li>
+                  </ul>
+                </span>
+                <span class="dropdown" data-bs-theme="dark"><button class="btn dropdown-toggle text-light" id="dropdownMenuButtonLight3" data-bs-toggle="dropdown">Ride</button>
+                     <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenuButtonLight3">
+                    <li>Rides</li>
+                    <li>Book a Test Ride</li>
+                    <li>Rentals</li>
+                    <li>Tours</li>
+                  </ul></span>
+                <span ><button class="btn  text-light"><a href="#all">Explore</a></button></span>
+                <span class="dropdown"><a href="#footer"><button class="btn text-light">Contact Us</button></a></span>
+
+            </nav>
+        </div>
+        <div>
+            <nav><span class="bi bi-person-fill"></span>
+                <span class="bi bi-search"></span>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="div"> </div>
+        <h1 class="heading">Find Your <br>Perfect Ride</h1>
+        <a href="#all"><button class="btn btn-danger position-absolute bottom-0 end-0 rounded-5">Explore Now <span
+                    class="bi bi-arrow-right"></span></button></a>
+    </main>
+    <div>
+        <marquee class="bg-danger  p-2 ">
+            <div>✨ Explore top-quality bikes with the best features, prices, and performance. </div>
+        </marquee>
+        <div class="bg-black p-3" id="all">
+            <ul class="list fs-5">
+                <li><a href="#all">All</a></li> 
+                <li><a href="#sports">Sport</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#roadster">Roadster</a></li>
+                <li><a href="#heritage">Heritage</a></li>
+                <li><a href="#adventure">Adventure</a></li>
+            </ul>
+        </div>
+        <div class="bg-black">
+        <h2 class="mb-5 ps-5 moto ">MOTORCYCLES</h2>
+
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <figure>
+
+                        <img src="https://rashitiwari423-lgtm.github.io/Wheelora/meteor-350-black-home.avif"
+                            class="d-block w-80">
+                        <figcaption>
+                            <h3>Meteor 350</h3>
+                        </figcaption>
+                    </figure>
+                    <a href="https://www.bikewale.com/royalenfield-bikes/meteor-350/"><button class="bt">BUY NOW</button></a>
+                </div>
+                <div class="carousel-item">
+                    <figure>
+
+                        <img src="https://rashitiwari423-lgtm.github.io/Wheelora/super-meteor-650.avif"
+                            class="d-block w-80">
+                        <figcaption>
+                            <h3>Super Meteor 650</h3>
+                        </figcaption>
+                    </figure>
+                    <a href="https://www.bikewale.com/royalenfield-bikes/super-meteor-650/"><button class="bt">BUY NOW</button></a>
+                </div>
+                <div class="carousel-item">
+                    <figure>
+
+                        <img src="https://rashitiwari423-lgtm.github.io/Wheelora/scram-440.avif" class="d-block w-80">
+                        <figcaption>
+                            <h3>Scram 440</h3>
+                        </figcaption>
+                    </figure>
+                    <a href="https://www.bikewale.com/royalenfield-bikes/scram-440/"><button class="bt">BUY NOW</button></a>
+                </div>
+                <div class="carousel-item">
+                    <figure>
+
+                        <img src="https://rashitiwari423-lgtm.github.io/Wheelora/himalayan-450.avif"
+                            class="d-block w-80">
+                        <figcaption>
+                            <h3>Himalayan 450</h3>
+                        </figcaption>
+                    </figure>
+                    <a href="https://www.bikewale.com/royalenfield-bikes/himalayan/"><button class="bt">BUY NOW</button></a>
+                </div>
+
+                <div class="carousel-item">
+                    <figure>
+
+                        <img src="https://rashitiwari423-lgtm.github.io/Wheelora/bear-650.avif" class="d-block w-80">
+                        <figcaption>
+                            <h3>Bear 650</h3>
+                        </figcaption>
+                    </figure>
+                    <a href="https://www.bikewale.com/royalenfield-bikes/bear-650/"><button class="bt">BUY NOW</button></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+        </div>
+        <h2 class="m-5" id="sports">SPORT</h2>
+        <div class="cardss row m-5">
+           
+            <div class="card  p-2 w-25 card col">
+                 <a href="https://www.bikewale.com/yamaha-bikes/r15/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/Yamaha.avif" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Yamaha R15 V4</h5>
+                    <span class="bi bi-star-fill text-success"> 4.8/5</span>
+                    <p class="card-text">155 cc|51.4 kmpl|18.1 bhp|141 kg</p>
+                    <span>Starting @ ₹ 1,70,240</span>
+                </div>
+            </a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/bmw-bikes/g310-rr/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/bmw-g310-rr-limited-edition1758872036171.avif"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">BMW G310 RR</h5>
+                    <span class="bi bi-star-fill text-success"> 4.4/5</span>
+                    <p class="card-text"> 312.12 cc|30 kmpl|33.5 bhp|174 kg</p>
+                    <span>Starting @ ₹ 2,81,000</span>
+                </div>
+            </a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/kawasaki-bikes/ninja-zx-10r/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/Kawasaki%20Ninja.avif" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Kawasaki Ninja ZX-10R</h5>
+                    <span class="bi bi-star-fill text-success"> 4.9/5</span>
+                    <p class="card-text">998 cc|25 kmpl|193 bhp|207 kg</p>
+                    <span>Starting @ ₹ 20,79,000</span>
+                </div>
+</a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/bmw-bikes/s1000rr/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/bmw-s1000rr-m-sport1737458459091.webp"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">BMW S1000RR</h5>
+                    <span class="bi bi-star-fill text-success"> 5/5</span>
+                    <p class="card-text">999 cc|16 kmpl|206.51 bhp|197 kg</p>
+                    <span>Starting @ ₹ 22,76,000</span>
+                </div>
+
+</a>
+            </div>
+
+        </div>
+
+        <h2 class="m-5" id="tour">TOUR</h2>
+        <div class="cardss row m-5 w-50">
+
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/honda-bikes/nx500/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/honda-snx500.avif" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Honda NX500</h5>
+                    <span class="bi bi-star-fill text-success"> 4.7/5</span>
+                    <p class="card-text">471 cc|26.5 kmpl|46.9 bhp|196 kg</p>
+                    <span>Starting @ ₹ 6,32,126</span>
+                </div>
+
+</a>
+            </div>
+            <div class="card  p-2 card col">
+                <a href="https://www.bikewale.com/honda-bikes/transalp-xl750/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/honda-transalp-xl750-standard1750140711560.avif"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Honda Transalp XL750</h5>
+                    <span class="bi bi-star-fill text-success"> 4.8/5</span>
+                    <p class="card-text"> 1300 cc|21 kmpl|143.4 bhp|269 kg</p>
+                    <span>Starting @ ₹ 24,95,000</span>
+                </div>
+
+</a>
+            </div>
+
+
+        </div>
+        <h2 class="m-5" id="roadster">ROADSTER</h2>
+        <div class="cardss row m-5 w-75">
+
+            <div class="card  p-2  card col">
+                <a href="https://www.bikewale.com/ducati-bikes/desertx/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/ducati-select-model-rally-1714481048601.avif"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Ducati DesertX</h5>
+                    <span class="bi bi-star-fill text-success"> 4.3/5</span>
+                    <p class="card-text">937 cc|17.8 kmpl|108.6 bhp|223 kg</p>
+                    <span>Starting @ ₹ 19,59,200</span>
+                </div>
+</a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/royalenfield-bikes/classic-350/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/royalenfield-classic-350-2024-chrome1725118062767.avif"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Royal Enfield Classic 350</h5>
+                    <span class="bi bi-star-fill text-success"> 4.7/5</span>
+                    <p class="card-text"> 349 cc|35 kmpl|20.2 bhp|195 kg</p>
+                    <span>Starting @ ₹ 1,81,129</span>
+                </div>
+</a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/harleydavidson-bikes/x440/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/harleydavidson-x440-s1748859652160.avif"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Harley-Davidson X440</h5>
+                    <span class="bi bi-star-fill text-success"> 4.8/5</span>
+                    <p class="card-text">440 cc|35 kmpl|27 bhp|190.5 kg</p>
+                    <span>Starting @ ₹ 2,39,500</span>
+                </div>
+</a>
+
+            </div>
+
+        </div>
+        <h2 class="m-5" id="heritage">HERITAGE</h2>
+        <div class="cardss row m-5 w-25">
+
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/harleydavidson-bikes/heritage-classic/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/heritage.avif" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Harley-Davidson Heritage Classic</h5>
+                    <span class="bi bi-star-fill text-success"> 4.7/5</span>
+                    <p class="card-text">471 cc|26.5 kmpl|46.9 bhp|196 kg</p>
+                    <span>Starting ₹ 25,71,000</span>
+                </div>
+
+</a>
+            </div>
+
+
+        </div>
+
+        <h2 class="m-5" id="adventure">ADVENTURE</h2>
+        <div class="cardss row m-5 w-75">
+
+            <div class="card  p-2  card col">
+                <a href="https://www.bikewale.com/hero-bikes/xpulse-200-4v/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/hero-xpulse-200-4v-pro-dakar-edition1734451974244.avif"
+                    class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Hero Xpulse 200 4V</h5>
+                    <span class="bi bi-star-fill text-success"> 4.6/5</span>
+                    <p class="card-text">199.6 cc|32.9 kmpl|18.9 bhp|161 kg</p>
+                    <span>Starting @ ₹ 1,39,200</span>
+                </div>
+</a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/suzuki-bikes/v-strom-sx/">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/suzuki%20v%20strom.webp" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Suzuki V-Strom SX</h5>
+                    <span class="bi bi-star-fill text-success"> 4.7/5</span>
+                    <p class="card-text"> 249 cc|36 kmpl|26.1 bhp|167 kg</p>
+                    <span>Starting @ ₹ 2,00,129</span>
+                </div>
+</a>
+
+            </div>
+            <div class="card  p-2 w-25 card col">
+                <a href="https://www.bikewale.com/benelli-bikes/trk-502x/
+                ">
+                <img src="https://rashitiwari423-lgtm.github.io/Wheelora/benelli.webp" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title">Benelli TRK 502X</h5>
+                    <span class="bi bi-star-fill text-success"> 4.8/5</span>
+                    <p class="card-text">440 cc|35 kmpl|27 bhp|190.5 kg</p>
+                    <span>Starting @ ₹ 2,39,500</span>
+                </div>
+
+</a>
+            </div>
+
+        </div>
+
+
+<footer id="footer">
+     <div>
+            <div class="footer-brand-name">
+                Shopper.
+            </div>
+            <aside>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-youtube"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-twitter"></span>
+            </aside>
+        </div>
+        <div>
+            <div class="data">Support</div>
+            <span>Contact Us</span>
+            <span>FAQs</span>
+            <span>Size Guide</span>
+            <span>Shipping & Returns</span>
+        </div>
+        <div >
+            <div class="data">Shop</div>
+            <span>bikes</span>
+            <span>Accesories</span>
+            <span>Others</span>
+            <span>Discounts</span>
+        </div>
+        <div >
+            <div class="data">Company</div>
+            <span>Our Story</span>
+            <span>Careers</span>
+            <span>Terms & Conditions</span>
+            <span>Privary & Cookie Policy</span>
+        </div>
+        <div >
+            <div class="data">Contact</div>
+            <span>1-202-555-0105</span>
+            <span>1-202-555-0106</span>
+            <span>help@wheelora.com</span>
+        </div>
+</footer>
+
+</body>
+
+</html>

@@ -25,6 +25,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Oleo+Script:wght@400;700&display=swap');
         @media(max-width:800px){}
+        .light-mode body{
+            color:black;
+        }
         body {
             background-color: #242424;
             font-family: "Google Sans Flex", sans-serif;
@@ -32,6 +35,7 @@
             font-size: 14px;
         }
 
+      
         header {
             background-color: black;
             height: 50px;
@@ -188,6 +192,7 @@
     color: #111 !important;
 }
 
+
 .light-mode header,
 .light-mode footer,
 .light-mode .bg-black,
@@ -200,7 +205,24 @@
     color: black !important;
 }
 
-        
+     .light-mode header{
+            color:black;
+        }  
+        .light-mode header,
+.light-mode header h1,
+.light-mode header span,
+.light-mode header button,
+.light-mode header a {
+    color: black !important;}
+    .light-mode .card {
+    background: #8b1e1e !important;
+    color: white !important;
+}
+.light-mode .card h5,
+.light-mode .card p,
+.light-mode .card span {
+    color: white !important;
+}    
         
     </style>
 </head>
@@ -213,7 +235,9 @@
             </nav>
         </div>
         <div>
-            <nav><span class="dropdown" data-bs-theme="dark"><button class="btn dropdown-toggle text-light "
+            <nav><span class="dropdown" data-bs-theme="dark"><button class="btn dropdown-toggle text-light " style=" .light-mode {
+            color:black;
+        }      "
                         id="dropdownMenuButtonLight" data-bs-toggle="dropdown">Motorcycles</button>
                     <ul class="dropdown-menu p-4" aria-labelledby="dropdownMenuButtonLight">
                         <li><a href="#all">All</a></li>
@@ -607,7 +631,7 @@
   </div>
 </div>
 <script>
-    // ===== THEME =====
+  
     function toggleTheme() {
         document.body.classList.toggle("light-mode");
         localStorage.setItem("theme",
@@ -615,7 +639,7 @@
         );
     }
 
-    // ===== LOGIN SYSTEM =====
+   
     function openLogin() {
         let user = localStorage.getItem("user");
         if (user) {
@@ -652,7 +676,7 @@
         alert("Logged out successfully");
     }
 
-    // ===== LOAD SETTINGS =====
+
     window.onload = function () {
         // Theme
         let theme = localStorage.getItem("theme");
@@ -660,7 +684,6 @@
             document.body.classList.add("light-mode");
         }
 
-        // User
         let user = localStorage.getItem("user");
         if (user) {
             document.getElementById("userLabel").innerText = user;
